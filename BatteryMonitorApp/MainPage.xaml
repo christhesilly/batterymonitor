@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BatteryMonitorApp.MainPage"
+             Title="Battery Monitor Settings">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Battery Warning Threshold"
+                FontSize="22"
+                HorizontalOptions="Center" />
+
+            <Slider
+                x:Name="BatteryThresholdSlider"
+                Minimum="10"
+                Maximum="50"
+                Value="20"
+                MinimumTrackColor="LightGray"
+                MaximumTrackColor="DeepSkyBlue"
+                ThumbColor="Blue"
+                HorizontalOptions="FillAndExpand" />
+            <Label
+                x:Name="BatteryThresholdLabel"
+                Text="Current Threshold: 20%"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="NotificationTitleEntry"
+                Placeholder="Notification Title (e.g., Low Battery Warning!)"
+                Text="Low Battery Warning!"
+                HorizontalOptions="FillAndExpand" />
+
+            <Entry
+                x:Name="NotificationMessageEntry"
+                Placeholder="Notification Message (e.g., Plug in your phone soon!)"
+                Text="Your battery is low. Please plug in your phone."
+                HorizontalOptions="FillAndExpand" />
+
+            <Button
+                x:Name="SaveSettingsButton"
+                Text="Save Settings"
+                SemanticProperties.Hint="Saves the current battery threshold and notification text"
+                Clicked="OnSaveSettingsClicked"
+                HorizontalOptions="FillAndExpand" />
+
+            <Button
+                x:Name="TestNotificationButton"
+                Text="Send Test Notification"
+                SemanticProperties.Hint="Sends a test notification to preview its appearance"
+                Clicked="OnTestNotificationClicked"
+                HorizontalOptions="FillAndExpand" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,6 @@
+{
+  "sdk": {
+    "version": "9.0.301", // <--- USE THE EXACT 9.0.x SDK VERSION FROM 'dotnet --list-sdks'
+    "rollForward": "latestPatch"
+  }
+}
